@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Optional, Type, Union
+from typing import Any, Dict, Optional, Union
 
 import torch.nn as nn
 from safetensors.torch import save_model
@@ -30,7 +30,7 @@ class DummyModel(BaseModel):
 
     @classmethod
     def _from_pretrained(
-        cls: Type["DummyModel"],
+        cls,
         *,
         model_id: str,
         revision: Optional[str],
@@ -41,6 +41,6 @@ class DummyModel(BaseModel):
         local_files_only: bool,
         token: Optional[Union[str, bool]],
         **model_kwargs: Any,
-    ) -> "DummyModel":
+    ):
         model = cls(**model_kwargs)
         return model

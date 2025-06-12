@@ -1,12 +1,12 @@
 from pathlib import Path
 
 import torch.nn as nn
-from huggingface_hub import ModelHubMixin
+from huggingface_hub import PyTorchModelHubMixin
 
 from mir_model_collection.env import get_cache_dir
 
 
-class BaseModel(nn.Module, ModelHubMixin):
+class BaseModel(nn.Module, PyTorchModelHubMixin):
     @classmethod
     def get_model_name(cls) -> str:
         from mir_model_collection.models.register import get_model_name
