@@ -1,2 +1,5 @@
+from mir_model_collection._core import hello_from_bin
+
+
 def hello() -> str:
-    return "Hello from mir-model-collection!"
+    return hello_from_bin()

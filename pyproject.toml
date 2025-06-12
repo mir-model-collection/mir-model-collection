@@ -7,8 +7,21 @@ authors = [
     { name = "Chih-Pin Tan", email = "tanchihpin0517@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "huggingface-hub>=0.33.0",
+    "numpy>=2.3.0",
+    "safetensors>=0.5.3",
+    "torch>=2.7.1",
+]
+
+[project.scripts]
+mir-model-collection = "mir_model_collection:hello"
+
+[tool.maturin]
+module-name = "mir_model_collection._core"
+python-packages = ["mir_model_collection"]
+python-source = "src"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
