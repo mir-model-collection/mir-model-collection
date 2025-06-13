@@ -179,10 +179,10 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "huggingface-hub", specifier = ">=0.33.0" },
-    { name = "numpy", specifier = ">=2.3.0" },
-    { name = "safetensors", specifier = ">=0.5.3" },
-    { name = "torch", specifier = ">=2.7.1" },
+    { name = "huggingface-hub" },
+    { name = "numpy" },
+    { name = "safetensors" },
+    { name = "torch", specifier = ">2" },
 ]
 
 [[package]]
